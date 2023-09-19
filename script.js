@@ -17,7 +17,7 @@ for (let i = 1; i <= 9; i++) {
         // Display either "X" or "O" in the cell, and style it
         this.innerHTML = playerSymbol;
         this.classList.add(playerSymbol.toLowerCase());
-        
+
         // Check if a player has won
         checkWin();
         
@@ -37,7 +37,9 @@ function checkWin() {
 	  document.getElementById(winPos[i][0]).innerHTML === playerSymbol &&
 	  document.getElementById(winPos[i][1]).innerHTML === playerSymbol &&
 	  document.getElementById(winPos[i][2]).innerHTML === playerSymbol
-	) {
+	) { 
+    console.log(winPos[i][0]);
+
 	  document.getElementById(winPos[i][0]).classList.add("win");
 	  document.getElementById(winPos[i][1]).classList.add("win");
 	  document.getElementById(winPos[i][2]).classList.add("win"); 
